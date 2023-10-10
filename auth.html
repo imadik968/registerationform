@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Login and Registration Form in HTML CSS & JavaScript</title>
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+    <div class="mainbox">
+        <div class="boxinner">
+            <div class="box1">
+                <div class="text">
+                    <img src="img/background3.jpg" alt="">
+                    <h3>Wellcome</h3>
+                    <p>Already have an account</p>
+                    <button class="signinbtn">Sign in</button>
+                </div>
+                <div class="text">
+                    <img src="img/background4.jpg" alt="">
+                    <h3>Hello!</h3>
+                    <p>Dont't have an account</p>
+                    <button class="signupbtn">Sign up</button>
+                </div>
+            </div>
+            <div class="box2">
+                    <div class="formbox">
+                        <div class="form login">
+                            <h2>Sign in</h2>
+                            <div class="inputbox">
+                                <input type="text" placeholder="Username">
+                            </div>
+                            <div class="inputbox">
+                                <input type="password" placeholder="Password">
+                                <p>Forget Password</p>
+                            </div>
+                            <input type="button" value="Login">
+                        </div>
+                        <div class="form reg">
+                            <h2>Sign up</h2>
+                            <div class="inputbox">
+                                <input type="text" placeholder="Username">
+                            </div>
+                            <div class="inputbox">
+                                <input type="password" placeholder="Password">
+                            </div>
+                            <div class="inputbox">
+                                <input type="password" placeholder="Confirm Password">
+                            </div>
+                            <input type="button" value="Submit">
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var signinbtn=document.querySelector(".signinbtn");
+        var signupbtn=document.querySelector(".signupbtn");
+        var box2=document.querySelector(".box2");
+        var login=document.querySelector(".login");
+        var reg=document.querySelector(".reg")
+
+        signupbtn.addEventListener("click" , function(){
+            box2.classList.add("active");
+            login.classList.add("active");
+            reg.classList.add("active");
+        })
+
+        signinbtn.addEventListener("click", function(){
+            box2.classList.remove("active");
+            login.classList.remove("active");
+            reg.classList.remove("active");
+        })
+    </script>
+</body>
+</html>
